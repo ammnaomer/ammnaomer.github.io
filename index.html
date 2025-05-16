@@ -2,180 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amna Omer Elzain - Data Analyst Portfolio</title>
+  <title>Amna Omer Elzain - Data Analyst</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 20px 30px;
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-      color: #102a43;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: #005f73;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 30px;
     }
-
-    h1, h2 {
-      font-weight: 600;
-      color: #243b53;
-      margin-bottom: 12px;
+    h2 {
+      color: #0a9396;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #94d2bd;
+      padding-bottom: 5px;
     }
-
-    p, li, a {
-      font-weight: 400;
-      line-height: 1.6;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-
+    ul li {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      font-size: 1.05em;
+    }
     a {
-      color: #3b82f6;
+      color: #005f73;
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-weight: 600;
     }
-
     a:hover {
-      color: #2563eb;
       text-decoration: underline;
     }
 
-    ul {
-      padding-left: 20px;
-      margin-top: 8px;
+    /* Pagination buttons */
+    .nav-buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .nav-buttons button {
+      background: #0a9396;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-buttons button:hover {
+      background: #005f73;
     }
 
     /* Pages */
     .page {
       display: none;
-      opacity: 0;
-      transform: translateX(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      animation: fadeIn 0.5s ease-in-out;
     }
     .page.active {
       display: block;
-      opacity: 1;
-      transform: translateX(0);
     }
 
-    /* Navigation Buttons */
-    .nav-buttons {
-      margin-top: 40px;
-      text-align: center;
-    }
-    button {
-      background: #2563eb;
-      border: none;
-      color: white;
-      padding: 12px 26px;
-      margin: 0 14px;
-      cursor: pointer;
-      font-size: 18px;
-      border-radius: 30px;
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
-    button:disabled {
-      background: #a5b4fc;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-    button:hover:not(:disabled) {
-      background: #1e40af;
-      box-shadow: 0 8px 16px rgba(30, 64, 175, 0.6);
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      body {
-        max-width: 90%;
-        padding: 15px 20px;
-        margin: 30px auto;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 0 8px;
-      }
+    /* Contact links */
+    .contact-info a {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <header>
+    Amna Omer Elzain - Data Analyst
+  </header>
 
-  <div class="page active" id="page1">
-    <h1>Amna Omer Elzain</h1>
-    <h2>Data Analyst</h2>
-    <p>Welcome! I'm Amna, a data analyst passionate about turning data into insights that support smart decision-making. I enjoy working with tools like Excel, SQL, Power BI, and R to analyze and visualize data.</p>
-  </div>
+  <div class="container">
 
-  <div class="page" id="page2">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Excel:</strong> Data cleaning, pivot tables, dashboards</li>
-      <li><strong>SQL:</strong> Writing queries, filtering and joining data</li>
-      <li><strong>Power BI:</strong> Building interactive dashboards and reports</li>
-      <li><strong>R:</strong> Statistical analysis and data visualization (ggplot2)</li>
-    </ul>
-  </div>
+    <div id="page-1" class="page active">
+      <h2>About Me</h2>
+      <p>Welcome! I'm Amna, a data analyst passionate about turning data into insights that support smart decision-making. I enjoy working with tools like Excel, SQL, Power BI, and R to analyze and visualize data.</p>
+    </div>
 
-  <div class="page" id="page3">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Sales Dashboard:</strong> Monthly sales KPIs dashboard using Excel + Power BI.</li>
-      <li><strong>Employee Turnover Analysis:</strong> Insights from resignation trends using SQL + Power BI.</li>
-    </ul>
-  </div>
+    <div id="page-2" class="page">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Excel:</strong> Data cleaning, pivot tables, dashboards</li>
+        <li><strong>SQL:</strong> Writing queries, filtering and joining data</li>
+        <li><strong>Power BI:</strong> Building interactive dashboards and reports</li>
+        <li><strong>R:</strong> Statistical analysis and data visualization (ggplot2)</li>
+      </ul>
+    </div>
 
-  <div class="page" id="page4">
-    <h2>Certifications</h2>
-    <ul>
-      <li>
-        <strong>Data Analyst with SQL – Career Track</strong> – DataCamp  
-        <br>
-        <small>Issued: 2025</small>  
-        <br>
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
-      </li>
-      <li>
-        <strong>Data Analyst with R – Career Track</strong> – DataCamp  
-        <br>
-        <small>Issued: 2024</small>  
-        <br>
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
-      </li>
-    </ul>
-  </div>
+    <div id="page-3" class="page">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Sales Dashboard:</strong> Monthly sales KPIs dashboard using Excel + Power BI.</li>
+        <li><strong>Employee Turnover Analysis:</strong> Insights from resignation trends using SQL + Power BI.</li>
+      </ul>
+    </div>
 
-  <div class="page" id="page5">
-    <h2>Contact</h2>
-    <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank" rel="noopener noreferrer">linkedin.com/in/amna-omer-53a7a4157</a><br>
-      GitHub: <a href="https://ammnaomer.github.io/" target="_blank" rel="noopener noreferrer">github.com/Amna-DataAnalyst</a><br>
-      Email: amnaomer754@gmail.com
-    </p>
-  </div>
+    <div id="page-4" class="page">
+      <h2>Certifications</h2>
+      <ul>
+        <li>
+          <strong>Data Analyst with SQL – Career Track</strong> – DataCamp  
+          <br />
+          <small>Issued: 2025</small>  
+          <br />
+          <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
+        </li>
+        <li>
+          <strong>Data Analyst with R – Career Track</strong> – DataCamp  
+          <br />
+          <small>Issued: 2024</small>  
+          <br />
+          <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
+        </li>
+        <li>
+          <strong>Data Analyst with Python – Career Track</strong> – DataCamp  
+          <br />
+          <small>Issued: 2025</small>  
+          <br />
+          <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="nav-buttons">
-    <button id="prevBtn" disabled>Previous</button>
-    <button id="nextBtn">Next</button>
+    <div id="page-5" class="page">
+      <h2>Contact</h2>
+      <p class="contact-info">
+        LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank" rel="noopener noreferrer">linkedin.com/in/amna-omer</a><br />
+        GitHub: <a href="https://ammnaomer.github.io/" target="_blank" rel="noopener noreferrer">github.com/Amna-DataAnalyst</a><br />
+        Email: <a href="mailto:amnaomer754@gmail.com">amnaomer754@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn" disabled>Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
   </div>
 
   <script>
     const pages = document.querySelectorAll('.page');
-    let currentPage = 0;
-
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    let currentPage = 0;
 
     function showPage(index) {
       pages.forEach((page, i) => {
         page.classList.toggle('active', i === index);
       });
       prevBtn.disabled = index === 0;
-      nextBtn.disabled = index === pages.length - 1;
+      nextBtn.disabled = index === pages.length -1;
     }
 
     prevBtn.addEventListener('click', () => {
@@ -186,14 +190,14 @@
     });
 
     nextBtn.addEventListener('click', () => {
-      if (currentPage < pages.length - 1) {
+      if (currentPage < pages.length -1) {
         currentPage++;
         showPage(currentPage);
       }
     });
 
+    // Initialize
     showPage(currentPage);
   </script>
-
 </body>
 </html>
