@@ -4,43 +4,102 @@
   <meta charset="UTF-8" />
   <title>Amna Omer Elzain - Data Analyst Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #f9f9f9;
-      color: #2c3e50;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px 30px;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      color: #102a43;
+      border-radius: 12px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      font-weight: 600;
+      color: #243b53;
+      margin-bottom: 12px;
+    }
+
+    p, li, a {
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    /* Pages */
     .page {
       display: none;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .page.active {
       display: block;
+      opacity: 1;
+      transform: translateX(0);
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
+
+    /* Navigation Buttons */
     .nav-buttons {
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
     }
     button {
-      background: #2980b9;
+      background: #2563eb;
       border: none;
       color: white;
-      padding: 10px 20px;
-      margin: 0 10px;
+      padding: 12px 26px;
+      margin: 0 14px;
       cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
+      font-size: 18px;
+      border-radius: 30px;
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
     button:disabled {
-      background: #aaa;
+      background: #a5b4fc;
       cursor: not-allowed;
+      box-shadow: none;
     }
-    a {
-      color: #2980b9;
+    button:hover:not(:disabled) {
+      background: #1e40af;
+      box-shadow: 0 8px 16px rgba(30, 64, 175, 0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        max-width: 90%;
+        padding: 15px 20px;
+        margin: 30px auto;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 0 8px;
+      }
     }
   </style>
 </head>
@@ -78,14 +137,14 @@
         <br>
         <small>Issued: 2025</small>  
         <br>
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank">🎓 View Certificate</a>
+        <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
       </li>
       <li>
         <strong>Data Analyst with Python – Career Track</strong> – DataCamp  
         <br>
         <small>Issued: 2025</small>  
         <br>
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a>
+        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
       </li>
     </ul>
   </div>
@@ -93,8 +152,8 @@
   <div class="page" id="page5">
     <h2>Contact</h2>
     <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">linkedin.com/in/amna-omer-53a7a4157</a><br>
-      GitHub: <a href="https://ammnaomer.github.io/" target="_blank">github.com/Amna-DataAnalyst</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank" rel="noopener noreferrer">linkedin.com/in/amna-omer-53a7a4157</a><br>
+      GitHub: <a href="https://ammnaomer.github.io/" target="_blank" rel="noopener noreferrer">github.com/Amna-DataAnalyst</a><br>
       Email: amnaomer754@gmail.com
     </p>
   </div>
@@ -133,7 +192,6 @@
       }
     });
 
-    // Initial display
     showPage(currentPage);
   </script>
 
