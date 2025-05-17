@@ -3,89 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amna Omer Elzain – Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Amna Omer Elzain | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #f0f4f8, #e0eafc);
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
       color: #2c3e50;
-      line-height: 1.6;
-      padding: 0 20px;
     }
-
     header {
-      background-color: #ffffffcc;
-      padding: 20px 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #0077b6;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
     nav a {
-      margin: 0 15px;
       text-decoration: none;
-      color: #023e8a;
+      color: #2c3e50;
       font-weight: 600;
       transition: color 0.3s;
     }
-
     nav a:hover {
-      color: #0096c7;
+      color: #6a11cb;
     }
-
-    .section {
-      padding: 50px 0;
-      animation: fadeIn 1s ease;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
     }
-
-    .section h2 {
-      font-size: 1.8rem;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      color: #03045e;
+      color: #34495e;
     }
-
-    ul li {
+    .project-category {
+      margin-bottom: 40px;
+    }
+    .project-category h3 {
+      font-size: 1.5rem;
       margin-bottom: 10px;
+      color: #6a11cb;
     }
-
-    a {
-      color: #0077b6;
-      text-decoration: none;
+    .project-item {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 10px;
+      transition: transform 0.2s;
     }
-
-    a:hover {
-      text-decoration: underline;
+    .project-item:hover {
+      transform: scale(1.02);
     }
-
     footer {
       text-align: center;
-      padding: 20px;
-      background: #f1f1f1;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+      padding: 40px 20px;
+      background: #ecf0f1;
+      color: #7f8c8d;
     }
   </style>
 </head>
@@ -93,51 +95,77 @@
 
   <header>
     <h1>Amna Omer Elzain</h1>
-    <p>Data Analyst Portfolio</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="telecom.html">Telecom</a>
-      <a href="sales.html">Sales</a>
-      <a href="education.html">Education</a>
-      <a href="health.html">Health</a>
-      <a href="entertainment.html">Entertainment</a>
-    </nav>
+    <p>Data Analyst | Turning Data into Insight</p>
   </header>
 
-  <section class="section">
-    <h2>Welcome</h2>
-    <p>Hi, I'm Amna, a passionate Data Analyst experienced with Excel, SQL, Power BI, and R. I love exploring data and building intuitive dashboards and insights that drive decisions.</p>
+  <nav>
+    <a href="#telecom">Telecom</a>
+    <a href="#sales">Sales</a>
+    <a href="#education">Education</a>
+    <a href="#health">Health</a>
+    <a href="#entertainment">Entertainment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="telecom">
+    <h2>Telecom Projects</h2>
+    <div class="project-category">
+      <div class="project-item">
+        <h3>Customer Churn Analysis</h3>
+        <p>Dashboard built in Excel to analyze customer churn behavior with KPIs, segmentation, and insights.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Excel:</strong> Cleaning, dashboards, pivot tables</li>
-      <li><strong>SQL:</strong> Data queries, joins, filtering</li>
-      <li><strong>Power BI:</strong> Visual reports, KPIs</li>
-      <li><strong>R:</strong> Visualization (ggplot2), stats</li>
-    </ul>
+  <section id="sales">
+    <h2>Sales Projects</h2>
+    <div class="project-category">
+      <div class="project-item">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Monthly sales tracking using Power BI, showing region-wise and product-wise breakdown.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li><strong>Data Analyst with SQL – Career Track</strong> – DataCamp<br><small>Issued: 2025</small><br><a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank">🎓 View Certificate</a></li>
-      <li><strong>Data Analyst with R – Career Track</strong> – DataCamp<br><small>Issued: 2024</small><br><a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a></li>
-    </ul>
+  <section id="education">
+    <h2>Education Projects</h2>
+    <div class="project-category">
+      <div class="project-item">
+        <h3>Student Performance Analysis</h3>
+        <p>Used R and ggplot2 to analyze exam scores and predict trends.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="section">
+  <section id="health">
+    <h2>Health Projects</h2>
+    <div class="project-category">
+      <div class="project-item">
+        <h3>Health Insurance Claims</h3>
+        <p>Analyzed medical claims data and identified fraud patterns using SQL.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="entertainment">
+    <h2>Entertainment Projects</h2>
+    <div class="project-category">
+      <div class="project-item">
+        <h3>Streaming Trends Dashboard</h3>
+        <p>Used Power BI to visualize user viewing habits across platforms like Netflix and YouTube.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">amna-omer</a><br>
-      GitHub: <a href="https://ammnaomer.github.io/" target="_blank">Amna-DataAnalyst</a><br>
-      Email: <a href="mailto:amnaomer754@gmail.com">amnaomer754@gmail.com</a>
-    </p>
+    <p>Email: amnaomer754@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/Amna-DataAnalyst" target="_blank">Amna-DataAnalyst</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">amna-omer</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Amna Omer Elzain – All rights reserved.
+    <p>&copy; 2025 Amna Omer Elzain. All Rights Reserved.</p>
   </footer>
 
 </body>
