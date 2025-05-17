@@ -1,137 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amna Omer Elzain - Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio with Projects Tabs</title>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+<script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 
-    h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-    }
-
-    h2 {
-      color: #34495e;
-      margin-top: 40px;
-      border-left: 4px solid #3498db;
-      padding-left: 10px;
-    }
-
-    p, li {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    ul {
-      margin-left: 20px;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      margin-bottom: 40px;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e4e7ec);
+    color: #333;
+    margin: 0; padding: 0;
+  }
+  main {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1rem;
+  }
+  section h2 {
+    font-size: 2.8rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+  /* Tabs container */
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .tab {
+    padding: 0.6rem 1.4rem;
+    background: #e4e7ec;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .tab.active {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+  /* Projects grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+    padding: 1.8rem 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+  }
+  .project-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 0.8rem;
+  }
+  .project-card p {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Amna Omer Elzain</h1>
-    <p><strong>Data Analyst</strong></p>
-  </header>
 
-  <div class="section">
-    <p>Hello! I'm Amna, a passionate data analyst who loves turning raw data into actionable insights. I work with tools like Excel, SQL, Power BI, and R to solve real-world problems and build visual stories from data.</p>
-  </div>
-
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Excel:</strong> Pivot tables, dashboards, and advanced formulas</li>
-      <li><strong>SQL:</strong> Data querying, filtering, joins, subqueries</li>
-      <li><strong>Power BI:</strong> Interactive dashboards, DAX functions</li>
-      <li><strong>R:</strong> Statistical analysis, data cleaning, ggplot2</li>
-    </ul>
-  </div>
-
-  <div class="section">
+<main>
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Sales Dashboard:</strong> Built in Excel and Power BI to track monthly KPIs</li>
-      <li><strong>Employee Turnover Analysis:</strong> Explored resignation patterns using SQL</li>
-    </ul>
-  </div>
 
-  <div class="section">
-    <h2>Certifications 📄</h2>
-    <ul>
-      <li>
-        <strong>Data Analyst with SQL – Career Track</strong> – DataCamp<br />
-        <small>Issued: 2025</small><br />
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank">🎓 View Certificate</a>
-      </li>
-      <li>
-        <strong>Data Analyst with R – Career Track</strong> – DataCamp<br />
-        <small>Issued: 2024</small><br />
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a>
-      </li>
-      <li>
-        <strong>Data Analyst with Python – Career Track</strong> – DataCamp<br />
-        <small>Issued: 2025</small><br />
-        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a>
-      </li>
-    </ul>
-  </div>
+    <div class="tabs" role="tablist" aria-label="Project categories">
+      <div class="tab active" role="tab" aria-selected="true" tabindex="0" data-category="telecom">Telecom</div>
+      <div class="tab" role="tab" aria-selected="false" tabindex="-1" data-category="sales">Sales</div>
+      <div class="tab" role="tab" aria-selected="false" tabindex="-1" data-category="hr">HR</div>
+      <div class="tab" role="tab" aria-selected="false" tabindex="-1" data-category="education">Education</div>
+      <div class="tab" role="tab" aria-selected="false" tabindex="-1" data-category="health">Health</div>
+      <div class="tab" role="tab" aria-selected="false" tabindex="-1" data-category="entertainment">Entertainment</div>
+    </div>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">linkedin.com/in/amna-omer</a><br />
-      GitHub: <a href="https://ammnaomer.github.io/" target="_blank">github.com/Amna-DataAnalyst</a><br />
-      Email: amnaomer754@gmail.com
-    </p>
-  </div>
+    <div class="projects">
 
-  <footer>
-    &copy; 2025 Amna Omer Elzain | All Rights Reserved
-  </footer>
+      <!-- Telecom projects -->
+      <div class="project-card" data-category="telecom">
+        <h3><i class="fas fa-signal" style="color:#2563eb; margin-right: 8px;"></i>Network Traffic Analysis</h3>
+        <p>Analyzed telecom network traffic to optimize bandwidth usage and reduce downtime.</p>
+      </div>
+      <div class="project-card" data-category="telecom">
+        <h3><i class="fas fa-mobile-alt" style="color:#2563eb; margin-right: 8px;"></i>Customer Churn Prediction</h3>
+        <p>Built models to predict and reduce customer churn using call data and customer feedback.</p>
+      </div>
+
+      <!-- Sales projects -->
+      <div class="project-card" data-category="sales" style="display:none;">
+        <h3><i class="fas fa-chart-line" style="color:#2563eb; margin-right: 8px;"></i>Sales Trend Forecasting</h3>
+        <p>Used historical sales data to forecast future trends and improve stock management.</p>
+      </div>
+      <div class="project-card" data-category="sales" style="display:none;">
+        <h3><i class="fas fa-tags" style="color:#2563eb; margin-right: 8px;"></i>Promotions Impact Analysis</h3>
+        <p>Evaluated the effectiveness of marketing campaigns on sales performance.</p>
+      </div>
+
+      <!-- HR projects -->
+      <div class="project-card" data-category="hr" style="display:none;">
+        <h3><i class="fas fa-user-friends" style="color:#2563eb; margin-right: 8px;"></i>Employee Retention Dashboard</h3>
+        <p>Created a dashboard to monitor employee engagement and turnover rates.</p>
+      </div>
+      <div class="project-card" data-category="hr" style="display:none;">
+        <h3><i class="fas fa-clipboard-list" style="color:#2563eb; margin-right: 8px;"></i>Recruitment Funnel Analysis</h3>
+        <p>Analyzed recruitment pipeline to identify bottlenecks and improve hiring process.</p>
+      </div>
+
+      <!-- Education projects -->
+      <div class="project-card" data-category="education" style="display:none;">
+        <h3><i class="fas fa-book-reader" style="color:#2563eb; margin-right: 8px;"></i>Student Performance Evaluation</h3>
+        <p>Analyzed student data to identify at-risk students and improve teaching methods.</p>
+      </div>
+      <div class="project-card" data-category="education" style="display:none;">
+        <h3><i class="fas fa-chalkboard-teacher" style="color:#2563eb; margin-right: 8px;"></i>Curriculum Effectiveness Study</h3>
+        <p>Evaluated curriculum changes impact on student outcomes using data analytics.</p>
+      </div>
+
+      <!-- Health projects -->
+      <div class="project-card" data-category="health" style="display:none;">
+        <h3><i class="fas fa-heartbeat" style="color:#2563eb; margin-right: 8px;"></i>Patient Data Analysis</h3>
+        <p>Explored patient records to identify trends in disease outbreaks.</p>
+      </div>
+      <div class="project-card" data-category="health" style="display:none;">
+        <h3><i class="fas fa-notes-medical" style="color:#2563eb; margin-right: 8px;"></i>Hospital Resource Management</h3>
+        <p>Optimized allocation of hospital resources to reduce wait times.</p>
+      </div>
+
+      <!-- Entertainment projects -->
+      <div class="project-card" data-category="entertainment" style="display:none;">
+        <h3><i class="fas fa-film" style="color:#2563eb; margin-right: 8px;"></i>Video Games Ratings Analysis</h3>
+        <p>Analyzed user and critic scores to identify top-rated video games trends.</p>
+      </div>
+      <div class="project-card" data-category="entertainment" style="display:none;">
+        <h3><i class="fas fa-music" style="color:#2563eb; margin-right: 8px;"></i>Streaming Service User Insights</h3>
+        <p>Studied user behavior on streaming platforms to boost engagement.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const projects = document.querySelectorAll('.project-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active from all tabs
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
+      });
+
+      // Add active to clicked tab
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
+
+      const category = tab.getAttribute('data-category');
+
+      // Show/hide projects based on category
+      projects.forEach(proj => {
+        if(proj.getAttribute('data-category') === category){
+          proj.style.display = 'block';
+        } else {
+          proj.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
