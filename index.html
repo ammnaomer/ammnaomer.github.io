@@ -2,202 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amna Omer Elzain - Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      color: #333;
+    * {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      box-sizing: border-box;
     }
-    header {
-      background: #005f73;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.8em;
-      letter-spacing: 2px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .container {
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 40px;
       max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      padding: 30px;
+      margin: auto;
     }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
     h2 {
-      color: #0a9396;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #94d2bd;
-      padding-bottom: 5px;
+      color: #34495e;
+      margin-top: 40px;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
     }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     ul {
-      list-style-type: none;
-      padding-left: 0;
+      margin-left: 20px;
     }
-    ul li {
-      margin-bottom: 15px;
-      line-height: 1.5;
-      font-size: 1.05em;
-    }
+
     a {
-      color: #005f73;
+      color: #2980b9;
       text-decoration: none;
-      font-weight: 600;
     }
+
     a:hover {
       text-decoration: underline;
     }
 
-    /* Pagination buttons */
-    .nav-buttons {
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    footer {
       text-align: center;
-      margin-top: 30px;
-    }
-    .nav-buttons button {
-      background: #0a9396;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 10px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-    .nav-buttons button:hover {
-      background: #005f73;
-    }
-
-    /* Pages */
-    .page {
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    .page.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    /* Contact links */
-    .contact-info a {
-      display: inline-block;
-      margin: 5px 10px 5px 0;
-      font-weight: bold;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
-    Amna Omer Elzain - Data Analyst
+    <h1>Amna Omer Elzain</h1>
+    <p><strong>Data Analyst</strong></p>
   </header>
 
-  <div class="container">
-
-    <div id="page-1" class="page active">
-      <h2>About Me</h2>
-      <p>Welcome! I'm Amna, a data analyst passionate about turning data into insights that support smart decision-making. I enjoy working with tools like Excel, SQL, Power BI, and R to analyze and visualize data.</p>
-    </div>
-
-    <div id="page-2" class="page">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Excel:</strong> Data cleaning, pivot tables, dashboards</li>
-        <li><strong>SQL:</strong> Writing queries, filtering and joining data</li>
-        <li><strong>Power BI:</strong> Building interactive dashboards and reports</li>
-        <li><strong>R:</strong> Statistical analysis and data visualization (ggplot2)</li>
-      </ul>
-    </div>
-
-    <div id="page-3" class="page">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Sales Dashboard:</strong> Monthly sales KPIs dashboard using Excel + Power BI.</li>
-        <li><strong>Employee Turnover Analysis:</strong> Insights from resignation trends using SQL + Power BI.</li>
-      </ul>
-    </div>
-
-    <div id="page-4" class="page">
-      <h2>Certifications</h2>
-      <ul>
-        <li>
-          <strong>Data Analyst with SQL – Career Track</strong> – DataCamp  
-          <br />
-          <small>Issued: 2025</small>  
-          <br />
-          <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
-        </li>
-        <li>
-          <strong>Data Analyst with R – Career Track</strong> – DataCamp  
-          <br />
-          <small>Issued: 2024</small>  
-          <br />
-          <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
-        </li>
-        <li>
-          <strong>Data Analyst with Python – Career Track</strong> – DataCamp  
-          <br />
-          <small>Issued: 2025</small>  
-          <br />
-          <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank" rel="noopener noreferrer">🎓 View Certificate</a>
-        </li>
-      </ul>
-    </div>
-
-    <div id="page-5" class="page">
-      <h2>Contact</h2>
-      <p class="contact-info">
-        LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank" rel="noopener noreferrer">linkedin.com/in/amna-omer</a><br />
-        GitHub: <a href="https://ammnaomer.github.io/" target="_blank" rel="noopener noreferrer">github.com/Amna-DataAnalyst</a><br />
-        Email: <a href="mailto:amnaomer754@gmail.com">amnaomer754@gmail.com</a>
-      </p>
-    </div>
-
-    <div class="nav-buttons">
-      <button id="prevBtn" disabled>Previous</button>
-      <button id="nextBtn">Next</button>
-    </div>
+  <div class="section">
+    <p>Hello! I'm Amna, a passionate data analyst who loves turning raw data into actionable insights. I work with tools like Excel, SQL, Power BI, and R to solve real-world problems and build visual stories from data.</p>
   </div>
 
-  <script>
-    const pages = document.querySelectorAll('.page');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentPage = 0;
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Excel:</strong> Pivot tables, dashboards, and advanced formulas</li>
+      <li><strong>SQL:</strong> Data querying, filtering, joins, subqueries</li>
+      <li><strong>Power BI:</strong> Interactive dashboards, DAX functions</li>
+      <li><strong>R:</strong> Statistical analysis, data cleaning, ggplot2</li>
+    </ul>
+  </div>
 
-    function showPage(index) {
-      pages.forEach((page, i) => {
-        page.classList.toggle('active', i === index);
-      });
-      prevBtn.disabled = index === 0;
-      nextBtn.disabled = index === pages.length -1;
-    }
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Sales Dashboard:</strong> Built in Excel and Power BI to track monthly KPIs</li>
+      <li><strong>Employee Turnover Analysis:</strong> Explored resignation patterns using SQL</li>
+    </ul>
+  </div>
 
-    prevBtn.addEventListener('click', () => {
-      if (currentPage > 0) {
-        currentPage--;
-        showPage(currentPage);
-      }
-    });
+  <div class="section">
+    <h2>Certifications 📄</h2>
+    <ul>
+      <li>
+        <strong>Data Analyst with SQL – Career Track</strong> – DataCamp<br />
+        <small>Issued: 2025</small><br />
+        <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc?raw=1" target="_blank">🎓 View Certificate</a>
+      </li>
+      <li>
+        <strong>Data Analyst with R – Career Track</strong> – DataCamp<br />
+        <small>Issued: 2024</small><br />
+        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a>
+      </li>
+      <li>
+        <strong>Data Analyst with Python – Career Track</strong> – DataCamp<br />
+        <small>Issued: 2025</small><br />
+        <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c?raw=1" target="_blank">🎓 View Certificate</a>
+      </li>
+    </ul>
+  </div>
 
-    nextBtn.addEventListener('click', () => {
-      if (currentPage < pages.length -1) {
-        currentPage++;
-        showPage(currentPage);
-      }
-    });
+  <div class="section">
+    <h2>Contact</h2>
+    <p>
+      LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">linkedin.com/in/amna-omer</a><br />
+      GitHub: <a href="https://ammnaomer.github.io/" target="_blank">github.com/Amna-DataAnalyst</a><br />
+      Email: amnaomer754@gmail.com
+    </p>
+  </div>
 
-    // Initialize
-    showPage(currentPage);
-  </script>
+  <footer>
+    &copy; 2025 Amna Omer Elzain | All Rights Reserved
+  </footer>
 </body>
 </html>
