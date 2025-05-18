@@ -1,183 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amna Omer - Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9f9fb;
-      color: #1c1c1e;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #ffffff;
-      padding: 20px 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      position: fixed;
-      width: 100%;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #2c3e50;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #0077cc;
-    }
-    section {
-      padding: 100px 40px 80px;
-      min-height: 100vh;
-    }
-    .hero {
-      background: linear-gradient(to right, #dbeafe, #e0f2fe);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 18px;
-      color: #555;
-      max-width: 600px;
-    }
-    .projects, .certifications, .contact {
-      background-color: #ffffff;
-      border-radius: 16px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      padding: 40px;
-    }
-    .project-category {
-      margin-bottom: 40px;
-    }
-    .project-category h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 5px;
-    }
-    .project-category ul li {
-      margin: 10px 0;
-    }
-    footer {
-      background: #f3f4f6;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Omer Elzain - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Amna Omer</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <a href="#home">DATA ANALYST PORTFOLIO BY AMNA OMER ELZAIN</a>
+        </div>
+        <nav>
+            <button class="menu-btn">MENU <i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about" class="hero fade-in">
-    <h2>Hello, I'm Amna 👋</h2>
-    <p>I'm a passionate Data Analyst who loves uncovering insights through data. Skilled in SQL, Power BI, R, Excel, and more.</p>
-  </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, my name is Amna Omer Elzain</h1>
+                <div class="hero-text">
+                    <p>WELCOME TO MY DATA ANALYST PORTFOLIO!</p>
+                    <p>HERE YOU WILL FIND A COLLECTION OF MY DATA ANALYTICS AND DATA SCIENCE PROJECTS, SHOWCASING MY SKILLS AND EXPERTISE IN THE FIELD.</p>
+                </div>
+                <a href="#about" class="btn">ABOUT ME</a>
+            </div>
+        </section>
 
-  <section id="projects" class="projects fade-in">
-    <h2>Projects</h2>
-    <div class="project-category">
-      <h3>📡 Telecom</h3>
-      <ul>
-        <li>Customer Churn Dashboard - Excel + Power BI</li>
-      </ul>
-    </div>
-    <div class="project-category">
-      <h3>💼 Sales</h3>
-      <ul>
-        <li>Sales KPIs Dashboard - Power BI + Excel</li>
-      </ul>
-    </div>
-    <div class="project-category">
-      <h3>🎓 Education</h3>
-      <ul>
-        <li>Student Performance Analysis</li>
-      </ul>
-    </div>
-    <div class="project-category">
-      <h3>🏥 Health</h3>
-      <ul>
-        <li>Hospital Admission Trends</li>
-      </ul>
-    </div>
-  </section>
+        <section id="about" class="about section-container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I am a passionate Data Analyst with expertise in transforming complex data into meaningful insights. My analytical approach combines technical skills with business acumen to deliver data-driven solutions that help organizations make informed decisions.</p>
+                    <p>With proficiency in Python, R, SQL, Excel, Tableau, and Power BI, I specialize in data cleaning, statistical analysis, data visualization, and predictive modeling. I am committed to continuous learning and staying updated with the latest trends and technologies in the field of data analytics.</p>
+                    <p>My goal is to leverage data to tell compelling stories that drive strategic initiatives and create value for businesses across various industries.</p>
+                </div>
+            </div>
 
-  <section id="certifications" class="certifications fade-in">
-    <h2>📄 Certifications</h2>
-    <ul>
-      <li>Data Analyst with R – DataCamp (2024)</li>
-      <li>Data Analyst with Python – DataCamp (2025)</li>
-      <li>Data Analyst with SQL – DataCamp (2025)</li>
-    </ul>
-  </section>
+            <div class="skills-container">
+                <div class="section-subheader">
+                    <h3>Skills</h3>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-card python">
+                        <h2>Python</h2>
+                        <p>TRANSFORMING DATA WITH PYTHON'S POWERFUL LIBRARIES AND FRAMEWORKS</p>
+                    </div>
+                    <div class="skill-card r">
+                        <h2>R</h2>
+                        <p>UNLOCKING THE POWER OF DATA WITH R</p>
+                    </div>
+                    <div class="skill-card sql">
+                        <h2>SQL</h2>
+                        <p>MASTERING DATA QUERYING AND MANAGEMENT WITH SQL</p>
+                    </div>
+                    <div class="skill-card excel">
+                        <h2>Excel</h2>
+                        <p>HARNESSING THE FULL POTENTIAL OF EXCEL FOR DATA ANALYSIS</p>
+                    </div>
+                    <div class="skill-card tableau">
+                        <h2>Tableau</h2>
+                        <p>CREATING INTERACTIVE AND DYNAMIC REPORTS WITH TABLEAU</p>
+                    </div>
+                    <div class="skill-card powerbi">
+                        <h2>Power BI</h2>
+                        <p>TRANSFORMING DATA INTO ACTIONABLE INSIGHTS WITH POWER BI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="contact" class="contact fade-in">
-    <h2>📬 Contact Me</h2>
-    <p>Email: amnaomer754@gmail.com</p>
-    <p>GitHub: <a href="https://ammnaomer.github.io/">github.com/Amna-DataAnalyst</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157">linkedin.com/in/amna-omer</a></p>
-  </section>
+        <section id="projects" class="projects section-container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
 
-  <footer>
-    &copy; 2025 Amna Omer. All rights reserved.
-  </footer>
+            <div class="project-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="telecom">Telecom</button>
+                <button class="category-btn" data-category="sales">Sales</button>
+                <button class="category-btn" data-category="education">Education</button>
+                <button class="category-btn" data-category="other">Other</button>
+            </div>
 
-  <script>
-    // simple scroll animation
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
+            <div class="project-grid">
+                <div class="project-card" data-category="telecom">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Telecom Customer Churn Analysis</h3>
+                        <p>Analyzed customer data to identify factors contributing to churn in a telecommunications company, resulting in targeted retention strategies that reduced churn rate by 15%.</p>
+                        <div class="tools-used">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-    document.querySelectorAll('.fade-in').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+                <div class="project-card" data-category="sales">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Created an interactive sales dashboard using Power BI to visualize key performance indicators, enabling real-time monitoring of sales performance across different regions.</p>
+                        <div class="tools-used">
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                            <span>Excel</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="education">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Performance Analysis</h3>
+                        <p>Analyzed student performance data to identify factors affecting academic success, providing insights that helped improve teaching methodologies and student outcomes.</p>
+                        <div class="tools-used">
+                            <span>R</span>
+                            <span>ggplot2</span>
+                            <span>Statistical Analysis</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="other">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Cleaning and Transformation</h3>
+                        <p>Developed an automated data cleaning pipeline that reduced processing time by 70% and improved data quality for downstream analysis.</p>
+                        <div class="tools-used">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications section-container">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Data Analysis with Python</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <p class="cert-date">2023</p>
+                        <a href="#" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>SQL for Data Science</h3>
+                        <p class="cert-issuer">University of California, Davis</p>
+                        <p class="cert-date">2022</p>
+                        <a href="#" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Data Visualization with Tableau</h3>
+                        <p class="cert-issuer">Tableau</p>
+                        <p class="cert-date">2022</p>
+                        <a href="#" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Microsoft Excel Expert</h3>
+                        <p class="cert-issuer">Microsoft</p>
+                        <p class="cert-date">2021</p>
+                        <a href="#" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="contact-container section-container">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:amnaomer754@gmail.com">amnaomer754@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>Available upon request</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Available upon request</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-link"></i>
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/amna-omer" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Amna-DataAnalyst" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amna Omer Elzain. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
