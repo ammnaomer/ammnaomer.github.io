@@ -4,136 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amna Omer - Data Analyst Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f4f7fb;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9fb;
+      color: #1c1c1e;
+      scroll-behavior: smooth;
     }
-    nav {
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      position: fixed;
+      width: 100%;
+      z-index: 999;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #2f3542;
-      color: #fff;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2c3e50;
     }
     nav a {
-      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
+      color: #555;
+      font-weight: 500;
+      transition: 0.3s;
     }
     nav a:hover {
-      color: #ffa502;
+      color: #0077cc;
     }
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+    section {
+      padding: 100px 40px 80px;
+      min-height: 100vh;
     }
-    h1, h2 {
-      color: #2c3e50;
-      margin-bottom: 20px;
+    .hero {
+      background: linear-gradient(to right, #dbeafe, #e0f2fe);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      transition: transform 0.3s;
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
     }
-    .card:hover {
-      transform: translateY(-5px);
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
     }
-    .certs a, .projects a {
-      color: #1e90ff;
-      text-decoration: none;
+    .projects, .certifications, .contact {
+      background-color: #ffffff;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 40px;
+    }
+    .project-category {
+      margin-bottom: 40px;
+    }
+    .project-category h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 5px;
+    }
+    .project-category ul li {
+      margin: 10px 0;
     }
     footer {
+      background: #f3f4f6;
       text-align: center;
       padding: 20px;
-      background: #2f3542;
-      color: #fff;
+      font-size: 14px;
+      color: #888;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div><strong>Amna Omer</strong></div>
-    <div>
+  <header>
+    <h1>Amna Omer</h1>
+    <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <section id="about" class="section">
-    <h1>About Me</h1>
-    <p>I’m Amna Omer, a data analyst passionate about transforming raw data into actionable insights. Skilled in Excel, SQL, Power BI, and R. Let's build the future with data!</p>
+  <section id="about" class="hero fade-in">
+    <h2>Hello, I'm Amna 👋</h2>
+    <p>I'm a passionate Data Analyst who loves uncovering insights through data. Skilled in SQL, Power BI, R, Excel, and more.</p>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects" class="projects fade-in">
     <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3><a href="telecom.html">Telecom</a></h3>
-        <p>Explore churn analysis, network usage, and subscription trends.</p>
-      </div>
-      <div class="card">
-        <h3><a href="sales.html">Sales</a></h3>
-        <p>Sales dashboards, KPIs and regional performance analysis.</p>
-      </div>
-      <div class="card">
-        <h3><a href="education.html">Education</a></h3>
-        <p>Student performance and engagement reporting.</p>
-      </div>
-      <div class="card">
-        <h3><a href="health.html">Health</a></h3>
-        <p>Analysis on patient visits, health programs and diagnosis trends.</p>
-      </div>
-      <div class="card">
-        <h3><a href="entertainment.html">Entertainment</a></h3>
-        <p>Streaming behaviors, genre analysis, and recommendation systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <div class="certs">
+    <div class="project-category">
+      <h3>📡 Telecom</h3>
       <ul>
-        <li><strong>Data Analyst with SQL – DataCamp (2025)</strong> - <a href="https://www.datacamp.com/statement-of-accomplishment/track/c5ad47d44427e9429f9c5912cd14c38b919fb1cc" target="_blank">View</a></li>
-        <li><strong>Data Analyst with R – DataCamp (2024)</strong> - <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c" target="_blank">View</a></li>
-        <li><strong>Data Analyst with Python – DataCamp (2025)</strong> - <a href="https://www.datacamp.com/statement-of-accomplishment/track/db0b4a6f03b8edcf085706d1f2afc3183e21f40c" target="_blank">View</a></li>
+        <li>Customer Churn Dashboard - Excel + Power BI</li>
+      </ul>
+    </div>
+    <div class="project-category">
+      <h3>💼 Sales</h3>
+      <ul>
+        <li>Sales KPIs Dashboard - Power BI + Excel</li>
+      </ul>
+    </div>
+    <div class="project-category">
+      <h3>🎓 Education</h3>
+      <ul>
+        <li>Student Performance Analysis</li>
+      </ul>
+    </div>
+    <div class="project-category">
+      <h3>🏥 Health</h3>
+      <ul>
+        <li>Hospital Admission Trends</li>
       </ul>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:amnaomer754@gmail.com">amnaomer754@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">@amna-omer</a></p>
-    <p>GitHub: <a href="https://ammnaomer.github.io/" target="_blank">@Amna-DataAnalyst</a></p>
+  <section id="certifications" class="certifications fade-in">
+    <h2>📄 Certifications</h2>
+    <ul>
+      <li>Data Analyst with R – DataCamp (2024)</li>
+      <li>Data Analyst with Python – DataCamp (2025)</li>
+      <li>Data Analyst with SQL – DataCamp (2025)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact fade-in">
+    <h2>📬 Contact Me</h2>
+    <p>Email: amnaomer754@gmail.com</p>
+    <p>GitHub: <a href="https://ammnaomer.github.io/">github.com/Amna-DataAnalyst</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157">linkedin.com/in/amna-omer</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Amna Omer. All rights reserved.</p>
+    &copy; 2025 Amna Omer. All rights reserved.
   </footer>
+
+  <script>
+    // simple scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
