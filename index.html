@@ -1,172 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amna Omer Elzain | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <title>Amna Omer - Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f5f7fa;
-      color: #2c3e50;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      overflow-x: hidden;
     }
-    header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
+
     nav {
-      background: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #1e272e;
+      color: white;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
     }
+
     nav a {
+      color: white;
       text-decoration: none;
-      color: #2c3e50;
-      font-weight: 600;
-      transition: color 0.3s;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
+
     nav a:hover {
-      color: #6a11cb;
+      color: #00cec9;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease-in-out;
+
+    .section {
+      min-height: 100vh;
+      padding: 6rem 2rem 2rem;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #34495e;
-    }
-    .project-category {
-      margin-bottom: 40px;
-    }
-    .project-category h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #6a11cb;
-    }
-    .project-item {
-      background: white;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 10px;
-      transition: transform 0.2s;
-    }
-    .project-item:hover {
-      transform: scale(1.02);
-    }
-    footer {
+
+    .hero {
+      background: linear-gradient(to right, #00cec9, #0984e3);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding: 40px 20px;
-      background: #ecf0f1;
-      color: #7f8c8d;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #2d3436;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #636e72;
+    }
+
+    footer {
+      background: #1e272e;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <h1>Amna Omer Elzain</h1>
-    <p>Data Analyst | Turning Data into Insight</p>
-  </header>
-
   <nav>
-    <a href="#telecom">Telecom</a>
-    <a href="#sales">Sales</a>
-    <a href="#education">Education</a>
-    <a href="#health">Health</a>
-    <a href="#entertainment">Entertainment</a>
-    <a href="#contact">Contact</a>
+    <div><strong>Amna Omer</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <section id="telecom">
-    <h2>Telecom Projects</h2>
-    <div class="project-category">
-      <div class="project-item">
-        <h3>Customer Churn Analysis</h3>
-        <p>Dashboard built in Excel to analyze customer churn behavior with KPIs, segmentation, and insights.</p>
+  <section class="section hero" id="about">
+    <h1>Hi, I'm Amna 👋</h1>
+    <p>A data analyst passionate about transforming data into actionable insights using SQL, Power BI, Excel, and R.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 style="margin-bottom: 2rem; text-align: center;">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Telecom Churn Dashboard</h3>
+        <p>Analysis of customer churn in the telecom industry using Excel dashboards and Power BI visualizations.</p>
+      </div>
+      <div class="card">
+        <h3>Sales KPIs</h3>
+        <p>Interactive dashboard to track monthly sales performance and trends across regions.</p>
+      </div>
+      <div class="card">
+        <h3>Education Analytics</h3>
+        <p>Insights into student performance and dropout using R and ggplot2.</p>
       </div>
     </div>
   </section>
 
-  <section id="sales">
-    <h2>Sales Projects</h2>
-    <div class="project-category">
-      <div class="project-item">
-        <h3>Sales Performance Dashboard</h3>
-        <p>Monthly sales tracking using Power BI, showing region-wise and product-wise breakdown.</p>
-      </div>
-    </div>
+  <section class="section" id="certifications">
+    <h2 style="text-align: center; margin-bottom: 1.5rem;">Certifications</h2>
+    <ul>
+      <li><strong>Data Analyst with R – DataCamp (2024)</strong></li>
+      <li><strong>Data Analyst with Python – DataCamp (2025)</strong></li>
+      <li><strong>Data Analyst with SQL – DataCamp (2025)</strong></li>
+    </ul>
   </section>
 
-  <section id="education">
-    <h2>Education Projects</h2>
-    <div class="project-category">
-      <div class="project-item">
-        <h3>Student Performance Analysis</h3>
-        <p>Used R and ggplot2 to analyze exam scores and predict trends.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="health">
-    <h2>Health Projects</h2>
-    <div class="project-category">
-      <div class="project-item">
-        <h3>Health Insurance Claims</h3>
-        <p>Analyzed medical claims data and identified fraud patterns using SQL.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="entertainment">
-    <h2>Entertainment Projects</h2>
-    <div class="project-category">
-      <div class="project-item">
-        <h3>Streaming Trends Dashboard</h3>
-        <p>Used Power BI to visualize user viewing habits across platforms like Netflix and YouTube.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: amnaomer754@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/Amna-DataAnalyst" target="_blank">Amna-DataAnalyst</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/amna-omer-53a7a4157" target="_blank">amna-omer</a></p>
+  <section class="section" id="contact">
+    <h2 style="text-align: center; margin-bottom: 1rem;">Contact</h2>
+    <p style="text-align: center;">
+      📧 amnaomer754@gmail.com<br />
+      🌐 <a href="https://ammnaomer.github.io/" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/amna-omer-53a7a4157/" target="_blank">LinkedIn</a>
+    </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Amna Omer Elzain. All Rights Reserved.</p>
+    <p>&copy; 2025 Amna Omer. All rights reserved.</p>
   </footer>
-
 </body>
+
 </html>
