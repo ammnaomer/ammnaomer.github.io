@@ -565,3 +565,34 @@ header {
         padding: 5rem 5%;
     }
 }
+
+.cert-card {
+  background-color: #f7faff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.cert-card:hover {
+  transform: scale(1.02);
+  background-color: #eef6ff;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cert-link:hover {
+  background-color: #005f99;
+}
+
