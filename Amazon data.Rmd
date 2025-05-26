@@ -1,0 +1,225 @@
+---
+title: "Amazon Sales"
+author: "Amna Omer"
+date: "2025-05-21"
+output: html_document
+---
+
+``
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```
+# Step 1: Load necessary libraries
+# Install packages if needed with: install.packages(c("dplyr", "ggplot2", "stringr", "corrplot"))
+```{r}
+library(readr)      # For reading data
+library(dplyr)      # For data manipulation
+library(ggplot2)    # For data visualization
+library(stringr)    # For string manipulation
+library(corrplot)   # For correlation plots
+
+```
+
+
+
+
+# Step 2: Read the data
+# Replace "amazon.csv" with your file path if different
+```{r}
+amazon_data <- read.csv("/Users/macbookair/Documents/Projects/R Projects/amazon.csv")
+
+```
+
+
+#step 3 : View The first 6 rows from data
+
+```{r} 
+head(amazon_data)
+```
+
+#step 4:clean and transform the data
+# Remove currency symbols and commas from price columns
+
+```{r}
+amazon_data$discounted_price_clean <- as.numeric(gsub("[₹,]", "", amazon_data$discounted_price))
+
+amazon_data$actual_price_clean <- as.numeric(gsub("[₹,]", "", amazon_data$actual_price))
+
+amazon_data$rating_clean <- str_extract(amazon_data$rating, "\\d+(\\.\\d+)?") %>%
+  as.numeric()
+
+amazon_data$rating_count_clean <- as.numeric(gsub(",", "", amazon_data$rating_count))
+
+```
+
+
+#step 5: Product Category Analysis
+
+# 5.1 What is the average rating for each product category?¶
+
+```{r}
+library(dplyr)
+
+avg_rating_by_category <- amazon_data %>%
+  group_by(category) %>%
+  summarise(avg_rating = mean(rating_clean, na.rm = TRUE)) %>%
+  arrange(desc(avg_rating))
+
+top10_avg_rating <- avg_rating_by_category %>%
+  slice_max(avg_rating, n = 10)
+
+ggplot(data = top10_avg_rating, aes(x = reorder(category, avg_rating), y = avg_rating)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Top 10 Product Categories by Average Rating", x = "Category", y = "Average Rating") +
+  theme_minimal()
+```
+
+#5.2 What are the top rating_count products by category?¶
+```{r}
+top_products_by_category <- amazon_data %>%
+  group_by(category) %>%                      # نجمع حسب الفئة
+  slice_max(rating_count, n = 1, with_ties = FALSE) %>%  # نختار المنتج الأعلى rating_count لكل فئة
+  arrange(category)
+
+print(top_products_by_category)
+```
+
+#5.3 What are the Top 5 categories based with highest ratings?
+```{r}
+library(dplyr)
+
+top5_categories <- amazon_data %>%
+  group_by(category) %>%
+  summarise(avg_rating = mean(rating_clean, na.rm = TRUE)) %>%
+  arrange(desc(avg_rating)) %>%
+  slice_head(n = 5)
+
+top5_categories
+
+```
+
+
+#6 Price Analysis
+#6.1 Compare original vs discounted prices
+```{r}
+price_comparison <- amazon_data %>%
+  select(actual_price_clean, discounted_price_clean) %>%
+  rename(Original = actual_price_clean, Discounted = discounted_price_clean) %>%
+  tidyr::pivot_longer(cols = c(Original, Discounted), names_to = "price_type", values_to = "price")
+
+p4 <- ggplot(price_comparison, aes(x = price_type, y = price)) +
+  geom_boxplot(fill = c("coral", "skyblue")) +
+  labs(title = "Comparison of Original vs. Discounted Prices",
+       x = "Price Type",
+       y = "Price") +
+  theme_minimal()
+print(p4)  # Display the plot
+
+```
+#6.2 What is the correlation between discounted_price and rating?
+
+```{r}
+# نتأكد إن الأعمدة عددية
+amazon_data$discounted_price_num <- as.numeric(amazon_data$discounted_price_clean)
+amazon_data$rating_num <- as.numeric(amazon_data$rating_clean)
+
+# نحذف الصفوف اللي فيها NA في العمودين
+clean_data <- amazon_data %>%
+  filter(!is.na(discounted_price_num), !is.na(rating_num))
+
+# نحسب معامل الارتباط (Pearson correlation)
+correlation <- cor(clean_data$discounted_price_num, clean_data$rating_num, method = "pearson")
+
+correlation
+
+
+library(ggplot2)
+
+ggplot(amazon_data, aes(x = discounted_price_clean, y = rating_clean)) +
+  geom_point(alpha = 0.5, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Scatter plot of Discounted Price vs Rating",
+       x = "Discounted Price",
+       y = "Rating") +
+  theme_minimal()
+
+```
+
+
+#7. What are the most popular product name?
+
+```{r}
+library(dplyr)
+
+# ترتيب المنتجات حسب عدد التقييمات (rating_count) نزولياً واختيار الأعلى
+most_popular_products <- amazon_data %>%
+  group_by(product_name) %>%
+  summarise(total_rating_count = sum(rating_count_clean, na.rm = TRUE)) %>%
+  arrange(desc(total_rating_count)) %>%
+  head(10)  # أعلى 10 منتجات
+
+most_popular_products
+
+
+```
+
+#8. What are the most popular product keywords?
+```{r}
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+# 1. نفصل أسماء المنتجات إلى كلمات منفصلة
+keywords <- amazon_data %>%
+  select(product_name) %>%
+  # نحول النص كله إلى أحرف صغيرة عشان التجميع يكون موحد
+  mutate(product_name = tolower(product_name)) %>%
+  # نفصل الكلمات بناءً على الفراغ أو علامات الترقيم
+  mutate(words = str_split(product_name, "\\W+")) %>%
+  unnest(words) %>%
+  filter(words != "")  # نزيل الكلمات الفارغة
+
+# 2. نعد تكرار كل كلمة
+keywords_count <- keywords %>%
+  group_by(words) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count)) %>%
+  head(20)  # أكثر 20 كلمة شيوعًا
+
+keywords_count
+
+```
+
+
+
+
+#9. What are the most popular product reviews?
+```{r}
+
+amazon_data %>%
+  count(review_content, sort = TRUE) %>%
+  slice_head(n = 10)
+
+
+```
+
+
+
+
+
+
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
