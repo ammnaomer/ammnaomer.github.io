@@ -15,29 +15,5 @@ I am a results-driven Data Analyst passionate about transforming raw numbers int
 Analyzed telecommunications customer data to identify key factors driving customer attrition, resulting in targeted retention strategies that reduced churn rate by 15%. Created interactive dashboards visualizing critical metrics that helped stakeholders monitor at-risk customers and implement effective interventions, generating approximately $850,000 in retained annual revenue.
 
 ## 2.Amazon Sales Analysis
+Analyzed Amazon sales data to identify patterns in product categories, pricing strategies, customer ratings, and product popularity. The analysis reveals insights into customer behavior and provides strategic recommendations for optimizing sales performance.
 
-
-
-### Adding Images
-
-1. Create an `images` folder if you want to add images
-2. Update the HTML to reference your images
-3. For profile picture, replace the placeholder in the About section
-
-### Changing Colors
-
-To modify the color scheme, edit the CSS variables at the top of the `styles.css` file:
-
-```css
-:root {
-    --primary-color: #f8f9fa;
-    --secondary-color: #e9ecef;
-    --accent-color: #a8d5e5;
-    /* other color variables */
-}
-```
-
-## Credits
-
-- Fonts: Google Fonts (Poppins, Inter)
-- Icons: Font Awesome
