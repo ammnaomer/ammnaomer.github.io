@@ -9,22 +9,14 @@ I am a results-driven Data Analyst passionate about transforming raw numbers int
 • Business Intelligence: Developing KPI reports that drive strategic decision-making
 • Problem Solving: Identifying opportunities and solutions through analytical thinking
 
-## GitHub Pages Setup Instructions
+## Projects
 
-1. Upload all files directly to the root of your repository (not in any subfolder)
-2. Make sure to maintain the exact folder structure:
-   - `index.html` (in the root)
-   - `css/styles.css` (in a folder named "css")
-   - `js/script.js` (in a folder named "js")
-3. After uploading, wait 2-5 minutes for GitHub Pages to update
-4. Visit https://ammnaomer.github.io/ to see your live site
+## 1. Customer Churn Analysis
+Analyzed telecommunications customer data to identify key factors driving customer attrition, resulting in targeted retention strategies that reduced churn rate by 15%. Created interactive dashboards visualizing critical metrics that helped stakeholders monitor at-risk customers and implement effective interventions, generating approximately $850,000 in retained annual revenue.
 
-## Customization
+## 2.Amazon Sales Analysis
 
-### Changing Content
 
-- Edit the `index.html` file to update text content, links, and section information
-- Replace placeholder content with your actual projects, skills, and certifications
 
 ### Adding Images
 
