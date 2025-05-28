@@ -17,7 +17,7 @@ I combine technical expertise with a creative, solution-oriented mindset—turni
 💡 Problem Solving: Identifying growth opportunities and solving business challenges through data
 
 ## 📁 Selected Projects
-## 🔹 1. Customer Churn Analysis — Telecommunications Sector
+## 🔹 1. Customer Churn Analysis — Telecommunications Sector (https://github.com/ammnaomer/ammnaomer.github.io/blob/main/customer_churn_dashboard.png)
 Analyzed customer behavior and usage data to detect churn drivers
 
 Built interactive dashboards highlighting churn risk factors and customer segments
@@ -26,7 +26,7 @@ Helped shape targeted retention strategies, resulting in a 15% reduction in chur
 
 Delivered insights that contributed to saving approximately $850,000 in annual revenue
 
-## 🔹 2. Amazon Sales Analysis
+## 🔹 2. Amazon Sales Analysis (https://github.com/ammnaomer/ammnaomer.github.io/blob/main/amazon_sales_report.pdf)
 Explored patterns in product categories, pricing, and customer ratings using Amazon sales data
 
 Identified key trends in consumer behavior and product performance
