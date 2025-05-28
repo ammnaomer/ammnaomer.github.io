@@ -1,15 +1,13 @@
 # Data Analyst Portfolio - Amna Omer Elzain
 
-This is a responsive portfolio website for a data analyst, featuring a modern design with smooth animations and a clean, professional layout.
+I am a results-driven Data Analyst passionate about transforming raw numbers into strategic insights. With expertise in Python, SQL, and visualization tools like Tableau and Power BI, I help businesses make data-informed decisions. My analytical approach combines technical precision with creative problem-solving to uncover meaningful patterns in complex datasets. I thrive on collaborating with teams to deliver impactful solutions that drive business growth.
 
-## Features
-
-- Responsive design that works on mobile and desktop devices
-- Modern fonts (Poppins/Inter)
-- Smooth scrolling and animations
-- Project filtering by category
-- Light color palette
-- Sections for About Me, Skills, Projects, Certifications, and Contact
+## Skills
+• Data Analysis: Transforming complex datasets into actionable business insights
+• Visualization Mastery: Creating compelling dashboards that tell data stories with Tableau & Power BI
+• Technical Expertise: Leveraging Python, R, and SQL to extract meaningful patterns from data
+• Business Intelligence: Developing KPI reports that drive strategic decision-making
+• Problem Solving: Identifying opportunities and solutions through analytical thinking
 
 ## GitHub Pages Setup Instructions
 
